@@ -1,0 +1,422 @@
+
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    background: #f5f7fb;
+    line-height: 1.6;
+}
+
+/* Navigation bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 9%;
+    background: #101d38;
+    border-bottom: 1px solid #29466e;
+}
+
+.logo {
+    font-size: 27px;
+}
+
+.logo span,
+.hero h1 span {
+    color: #318bff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #318bff;
+}
+
+/* Home hero section */
+.hero {
+    min-height: 520px;
+    padding: 80px 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    background: linear-gradient(120deg, #101d38, #132e59);
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.intro {
+    font-size: 18px;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 5vw, 64px);
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+.hero h3 {
+    font-size: 21px;
+    font-weight: 500;
+    margin: 15px 0;
+}
+
+.description {
+    color: #d4e0f5;
+    font-size: 17px;
+    max-width: 580px;
+    margin-bottom: 28px;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 7px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: #318bff;
+    color: white;
+}
+
+.primary-btn:hover {
+    background: #1768d1;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    border: 1px solid #6397d9;
+    color: white;
+}
+
+.secondary-btn:hover {
+    background: #24446f;
+}
+
+/* Profile placeholder */
+.hero-image {
+    flex-shrink: 0;
+}
+
+.profile-circle {
+    width: 260px;
+    height: 260px;
+    border: 5px solid #318bff;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #274d7c, #0c1830);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 35px #318bff30;
+}
+
+.profile-circle span {
+    font-size: 65px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* About section */
+.about {
+    padding: 75px 9%;
+    background: #ffffff;
+    color: #172746;
+}
+
+.about-content {
+    max-width: 750px;
+}
+
+.section-label {
+    color: #318bff;
+    letter-spacing: 2px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.about h2,
+.simple-section h2 {
+    font-size: 34px;
+    margin-bottom: 18px;
+}
+
+.about-content > p:not(.section-label) {
+    color: #4d5d76;
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+
+/* Other sections */
+.simple-section {
+    padding: 55px 9%;
+    text-align: center;
+    color: #172746;
+}
+
+.simple-section p {
+    color: #4d5d76;
+}
+
+#projects {
+    background: #eaf1fb;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #101d38;
+    color: white;
+}
+
+/* Mobile responsive design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 55px 7%;
+        gap: 30px;
+    }
+
+    .hero h3 {
+        font-size: 18px;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .profile-circle {
+        width: 180px;
+        height: 180px;
+    }
+
+    .about {
+        padding: 50px 7%;
+    }
+}
+
+
+.about-page {
+    background-color: #f5f7fb;
+    color: #172746;
+    padding: 80px 8%;
+    min-height: 80vh;
+}
+
+/* Two-column layout */
+.about-container {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+/* Left column */
+.about-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.about-content h2,
+.contact-content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about-content > p:not(.section-label) {
+    color: #4d5d76;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+/* Right column */
+.contact-content {
+    flex: 0 0 40%;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.section-label {
+    color: #318bff;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.contact-item {
+    padding: 15px 0;
+    border-bottom: 1px solid #e5eaf2;
+}
+
+.contact-item:last-child {
+    border-bottom: none;
+}
+
+.contact-item h3 {
+    font-size: 16px;
+    color: #172746;
+    margin-bottom: 5px;
+}
+
+.contact-item p {
+    color: #4d5d76;
+    overflow-wrap: anywhere;
+}
+
+/* Mobile responsive layout */
+@media (max-width: 768px) {
+    .about-page {
+        padding: 40px 6%;
+    }
+
+    .about-container {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .about-content,
+    .contact-content {
+        width: 100%;
+        flex: auto;
+    }
+}
+
+
+/* projcts css */
+
+
+/* Projects section */
+.project-page {
+    background-color: #f5f7fb;
+    color: #172746;
+    padding: 60px 8%;
+    min-height: 80vh;
+}
+
+.projects-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+/* Common parent for both projects */
+.project-container {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 30px;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.project-page {
+    background-color: #f5f7fb;
+    min-height: 100vh;
+    padding: 50px 8%;
+}
+
+.projects-title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #172746;
+}
+
+/* This arranges both projects horizontally */
+.project-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.project-card {
+    flex: 1;
+    min-width: 0;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h2 {
+    color: #172746;
+}
+
+.project-card h3 {
+    color: #318bff;
+}
+
+.project-card p {
+    color: #4d5d76;
+    line-height: 1.8;
+}
+
+/* On small screens, stack the projects */
+@media (max-width: 768px) {
+    .project-container {
+        flex-direction: column;
+    }
+}
